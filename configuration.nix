@@ -41,7 +41,8 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     wget vim gnupg git tmux zsh pass lxappearance sakura emacs chromium dmenu
-    xlibs.xmodmap ubuntu_font_family
+    xlibs.xmodmap ubuntu_font_family thunderbird tdesktop pinentry
+    i3lock
   ];
 
   programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
