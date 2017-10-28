@@ -41,15 +41,15 @@
   programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
 
   # Enable the X11 windowing system.
-  #services.xserver.enable = true;
-  #services.xserver.layout = "us,ru";
-  #services.xserver.xkbOptions = "ctrl:nocaps";
+  services.xserver.enable = true;
+  services.xserver.layout = "us,ru";
+  services.xserver.xkbOptions = "ctrl:nocaps";
 
   # Enable touchpad support.
-  #services.xserver.libinput.enable = true;
+  services.xserver.libinput.enable = true;
 
-  #services.xserver.windowManager.xmonad.enable = true;
-  #services.xserver.windowManager.xmonad.enableContribAndExtras = true;
+  services.xserver.windowManager.xmonad.enable = true;
+  services.xserver.windowManager.xmonad.enableContribAndExtras = true;
 
   users.extraUsers.guest = {
     isNormalUser = true;
