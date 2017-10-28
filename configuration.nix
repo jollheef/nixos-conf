@@ -70,6 +70,14 @@
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
 
+  services.xserver.desktopManager.xterm.enable = false;
+  services.xserver.displayManager.slim = {
+    enable = true;
+    defaultUser = "mikhail";
+    theme = "/etc/nixos/files/slim-minimal2";
+  };
+
+  # Xmonad
   services.xserver.windowManager.xmonad.enable = true;
   services.xserver.windowManager.xmonad.enableContribAndExtras = true;
 

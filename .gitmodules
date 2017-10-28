@@ -1,0 +1,3 @@
+[submodule "files/slim-minimal2"]
+	path = files/slim-minimal2
+	url = https://github.com/jpas/slim-minimal
