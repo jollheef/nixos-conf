@@ -40,7 +40,8 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    wget vim gnupg git tmux zsh pass
+    wget vim gnupg git tmux zsh pass lxappearance sakura emacs chromium dmenu
+    xlibs.xmodmap ubuntu_font_family
   ];
 
   programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
