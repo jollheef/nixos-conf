@@ -32,4 +32,5 @@ Installation
     # git clone https://github.com/jollheef/nixos-conf /mnt/etc/nixos
     # nixos-generate-config --root /mnt # generate hardware-configuration.nix
     # nixos-install
-    # reboot    
+    # wpa_passphrase SSID PASSWORD >> /mnt/etc/wpa_supplicant.conf # optional but I usually do this
+    # reboot
