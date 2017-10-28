@@ -21,7 +21,7 @@ Prepare disk
 
 Encrypt it and mount
 
-    # export NIXOS_NAME="thiq" # use you own value and do not forget to change int configuration.nix
+    # export NIXOS_NAME="thiq" # use you own value and do not forget to change it in configuration.nix
     # cryptsetup luksFormat /dev/sda1
     # cryptsetup luksOpen /dev/sda1  ${NIXOS_NAME}
     # mkfs.ext4 -L ${NIXOS_NAME} /dev/mapper/${NIXOS_NAME}
