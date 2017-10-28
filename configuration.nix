@@ -18,6 +18,11 @@
 
   boot.initrd.luks.devices."thiq".allowDiscards = true;
   fileSystems."/".options = [ "noatime" "nodiratime" "discard" ];
+  swapDevices = [
+    { device = "/var/swapfile";
+      size = 4096; # MiB
+    }
+  ];
 
   networking.hostName = "thiq"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
