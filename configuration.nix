@@ -51,7 +51,7 @@
   services.xserver.windowManager.xmonad.enable = true;
   services.xserver.windowManager.xmonad.enableContribAndExtras = true;
 
-  users.extraUsers.guest = {
+  users.extraUsers.mikhail = {
     isNormalUser = true;
     home = "/home/mikhail";
     extraGroups = ["wheel" "audio" "plugdev"];
