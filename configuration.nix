@@ -43,7 +43,23 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.layout = "us,ru";
-  services.xserver.xkbOptions = "ctrl:nocaps";
+  services.xserver.xkbOptions = "ctrl:nocaps,grp:rctrl_toggle";
+
+  environment.etc."X11/xorg.conf.d/60-trackball.conf".text = ''
+      Section "InputClass"
+        Identifier  "Marble Mouse"
+        MatchProduct "Logitech USB Trackball"
+        MatchIsPointer "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "evdev"
+        Option "ButtonMapping" "3 8 1 4 5 6 7 2 2"
+        Option "EmulateWheel" "true"
+        Option "EmulateWheelButton" "9"
+        Option "EmulateWheelInertia" "10"
+        Option "ZAxisMapping" "4 5"
+        Option "Emulate3Buttons" "true"
+      EndSection
+    '';
 
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
