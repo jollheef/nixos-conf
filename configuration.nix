@@ -85,6 +85,11 @@
     theme = "/etc/nixos/files/slim-minimal2";
   };
 
+  # vpn
+  services.openvpn.servers = {
+    primary = { config = '' config /home/mikhail/etc/vpn/client/primary.ovpn ''; };
+  };
+
   # Xmonad
   services.xserver.windowManager.xmonad.enable = true;
   services.xserver.windowManager.xmonad.enableContribAndExtras = true;
