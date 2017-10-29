@@ -42,7 +42,7 @@
   environment.systemPackages = with pkgs; [
     # utils
     wget tmux zsh vim emacs htop
-    gnupg pinentry git pass unzip
+    gnupg pinentry git pass unzip w3m
     # dev
     go
     # base x
