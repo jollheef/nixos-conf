@@ -47,6 +47,7 @@
     go
     # base x
     dmenu xlibs.xmodmap ubuntu_font_family i3lock lxappearance sakura
+    xfce.xfce4notifyd libnotify
     # x apps
     chromium thunderbird tdesktop scrot pinta
     google-play-music-desktop-player
