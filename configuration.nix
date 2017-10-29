@@ -42,13 +42,14 @@
   environment.systemPackages = with pkgs; [
     # utils
     wget tmux zsh vim emacs htop
-    gnupg pinentry git pass
+    gnupg pinentry git pass unzip
     # dev
     go
     # base x
     dmenu xlibs.xmodmap ubuntu_font_family i3lock lxappearance sakura
     # x apps
     chromium thunderbird tdesktop scrot pinta
+    google-play-music-desktop-player
   ];
 
   programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
