@@ -44,10 +44,10 @@
     wget tmux zsh vim emacs htop acpi
     gnupg pinentry git pass unzip w3m
     # dev
-    go gnumake
+    go gnumake gcc clang clang-analyzer global
     # base x
     dmenu xlibs.xmodmap ubuntu_font_family i3lock lxappearance sakura
-    xfce.xfce4notifyd libnotify
+    xfce.xfce4notifyd libnotify gtk_engines
     # x apps
     chromium thunderbird tdesktop scrot pinta
     google-play-music-desktop-player
