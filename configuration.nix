@@ -46,7 +46,7 @@
     # dev
     go
     # base x
-    dmenu xlibs.xmodmap  ubuntu_font_family i3lock lxappearance sakura
+    dmenu xlibs.xmodmap ubuntu_font_family i3lock lxappearance sakura
     # x apps
     chromium thunderbird tdesktop scrot pinta
   ];
