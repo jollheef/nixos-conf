@@ -44,13 +44,14 @@
     wget tmux zsh vim emacs htop acpi
     gnupg pinentry git pass unzip w3m
     # dev
-    go
+    go gnumake
     # base x
     dmenu xlibs.xmodmap ubuntu_font_family i3lock lxappearance sakura
     xfce.xfce4notifyd libnotify
     # x apps
     chromium thunderbird tdesktop scrot pinta
     google-play-music-desktop-player
+    zathura
   ];
 
   programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
