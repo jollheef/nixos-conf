@@ -41,7 +41,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     # utils
-    wget tmux zsh vim emacs htop acpi
+    wget tmux zsh vim emacs htop acpi bc
     gnupg pinentry git pass unzip w3m
     # dev
     go gnumake gcc clang clang-analyzer global
