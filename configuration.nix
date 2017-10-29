@@ -41,7 +41,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     # utils
-    wget tmux zsh vim emacs htop
+    wget tmux zsh vim emacs htop acpi
     gnupg pinentry git pass unzip w3m
     # dev
     go
