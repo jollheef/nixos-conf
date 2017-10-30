@@ -42,12 +42,12 @@
   environment.systemPackages = with pkgs; [
     # utils
     wget tmux zsh vim emacs htop acpi bc
-    gnupg pinentry git pass unzip w3m
+    gnupg pinentry git pass unzip w3m whois
     # dev
     go gnumake gcc clang clang-analyzer global
     # base x
     dmenu xlibs.xmodmap ubuntu_font_family i3lock lxappearance sakura
-    xfce.xfce4notifyd libnotify gtk_engines
+    xfce.xfce4notifyd libnotify gtk_engines xorg.xbacklight
     # x apps
     chromium thunderbird tdesktop scrot pinta
     google-play-music-desktop-player
