@@ -42,7 +42,7 @@
   environment.systemPackages = with pkgs; [
     # utils
     wget tmux zsh vim emacs htop acpi bc
-    gnupg pinentry git pass unzip w3m whois dnsutils
+    gnupg pinentry git pass unzip w3m whois dnsutils feh
     # dev
     go gnumake gcc clang clang-analyzer global
     # base x
