@@ -45,6 +45,7 @@
     gnupg pinentry git pass unzip w3m whois dnsutils feh
     # dev
     go gnumake gcc clang clang-analyzer global
+    python2Full python3Full python27Packages.ipython python36Packages.ipython
     # base x
     dmenu xlibs.xmodmap ubuntu_font_family i3lock lxappearance sakura
     xfce.xfce4notifyd libnotify gtk_engines xorg.xbacklight
