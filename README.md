@@ -16,8 +16,9 @@ then reboot && boot from usb
 Prepare disk
 
     # parted /dev/sda
-    # mklabel msdos
-    # mkpart primary ext4 0% 100%
+    # (parted) mklabel msdos
+    # (parted) mkpart primary ext4 0% 100%
+    # (parted) quit
 
 Encrypt it and mount
 
@@ -29,8 +30,13 @@ Encrypt it and mount
 
 Installation
 
+    # nix-channel --update
+    # nix-env -i git
     # git clone --recursive https://github.com/jollheef/nixos-conf /mnt/etc/nixos
     # nixos-generate-config --root /mnt # generate hardware-configuration.nix
+    # sed -i "s/thiq/${NIXOS_NAME}/g" /mnt/etc/nixos/configuration.nix # change installation name
+    # vim /mnt/etc/nixos/configuration.nix # you must edit some settings like a vpn/wifi support
+    # mount -o remount,size=4G /nix/.rw-store # avoid space left
     # nixos-install
     # wpa_passphrase SSID PASSWORD >> /mnt/etc/wpa_supplicant.conf # optional but I usually do this
     # reboot
