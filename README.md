@@ -37,20 +37,12 @@ Bootstrap minimal NixOS for avoid space issues
     # cp /mnt/etc/nixos/bootstrap-configuration.nix /mnt/etc/nixos/configuration.nix
     # sed -i "s/thiq/${NIXOS_NAME}/g" /mnt/etc/nixos/configuration.nix # change installation name
     # nixos-install
+    # reboot
 
-Chroot in new system
-
-    # mount --bind /proc /mnt/proc
-    # mount --bind /sys /mnt/sys
-    # mount --bind /dev /mnt/dev
-    # cp /etc/resolv.conf /mnt/etc/
-    # chroot /mnt
-
-Continue installation in chroot
+Continue installation after reboot
 
     # cd /etc/nixos && git reset --hard
     # sed -i "s/thiq/${NIXOS_NAME}/g" /etc/nixos/configuration.nix # change installation name
     # vim /etc/nixos/configuration.nix # you must edit some settings like a vpn/wifi support
     # nixos-rebuild switch
     # wpa_passphrase SSID PASSWORD >> /mnt/etc/wpa_supplicant.conf # optional but I usually do this
-    # reboot
