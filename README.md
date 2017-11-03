@@ -17,7 +17,7 @@ Prepare disk
 
     # parted /dev/sda
     # mklabel msdos
-    # mkpart primary ext4 0 100%
+    # mkpart primary ext4 0% 100%
 
 Encrypt it and mount
 
