@@ -28,15 +28,29 @@ Encrypt it and mount
     # mkfs.ext4 -L ${NIXOS_NAME} /dev/mapper/${NIXOS_NAME}
     # mount /dev/mapper/${NIXOS_NAME} /mnt
 
-Installation
+Bootstrap minimal NixOS for avoid space issues
 
     # nix-channel --update
     # nix-env -i git
     # git clone --recursive https://github.com/jollheef/nixos-conf /mnt/etc/nixos
     # nixos-generate-config --root /mnt # generate hardware-configuration.nix
+    # cp /mnt/etc/nixos/bootstrap-configuration.nix /mnt/etc/nixos/configuration.nix
+    # sed -i "s/thiq/${NIXOS_NAME}/g" /mnt/etc/nixos/configuration.nix # change installation name
+    # nixos-install
+
+Chroot in new system
+
+    # mount --bind /proc /mnt/proc
+    # mount --bind /sys /mnt/sys
+    # mount --bind /dev /mnt/dev
+    # cp /etc/resolv.conf /mnt/etc/
+    # chroot /mnt
+
+Continue installation in chroot
+
+    # cd /etc/nixos && git reset --hard
     # sed -i "s/thiq/${NIXOS_NAME}/g" /mnt/etc/nixos/configuration.nix # change installation name
     # vim /mnt/etc/nixos/configuration.nix # you must edit some settings like a vpn/wifi support
-    # mount -o remount,size=4G /nix/.rw-store # avoid space left
-    # nixos-install
+    # nixos-rebuild switch
     # wpa_passphrase SSID PASSWORD >> /mnt/etc/wpa_supplicant.conf # optional but I usually do this
     # reboot
