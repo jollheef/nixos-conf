@@ -41,7 +41,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     # utils
-    wget tmux zsh vim emacs htop acpi bc
+    wget tmux zsh vim emacs htop acpi bc p7zip mpv
     gnupg pinentry git pass unzip w3m whois dnsutils feh
     # dev
     go gnumake gcc clang clang-analyzer global
@@ -52,7 +52,7 @@
     # x apps
     chromium thunderbird tdesktop scrot pinta
     google-play-music-desktop-player
-    zathura
+    zathura wireshark
   ];
 
   programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
