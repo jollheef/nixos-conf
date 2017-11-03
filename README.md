@@ -47,3 +47,7 @@ Continue installation after reboot
     # nixos-rebuild switch
     # wpa_passphrase SSID PASSWORD >> /mnt/etc/wpa_supplicant.conf # optional but I usually do this
     # reboot # not necessary
+
+Known issues
+
+* I don't know how /etc/nixos/files does updated, so if you change something or display-manager.service does not start -- just rename files in /etc/nixos/files and relevant lines in the configuration.nix.
