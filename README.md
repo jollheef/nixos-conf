@@ -42,7 +42,8 @@ Bootstrap minimal NixOS for avoid space issues
 Continue installation after reboot
 
     # cd /etc/nixos && git reset --hard
-    # sed -i "s/thiq/${NIXOS_NAME}/g" /etc/nixos/configuration.nix # change installation name
+    # sed -i "s/thiq/$(hostname)/g" /etc/nixos/configuration.nix # change installation name
     # vim /etc/nixos/configuration.nix # you must edit some settings like a vpn/wifi support
     # nixos-rebuild switch
     # wpa_passphrase SSID PASSWORD >> /mnt/etc/wpa_supplicant.conf # optional but I usually do this
+    # reboot # not necessary
