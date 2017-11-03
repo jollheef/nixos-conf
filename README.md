@@ -49,8 +49,8 @@ Chroot in new system
 Continue installation in chroot
 
     # cd /etc/nixos && git reset --hard
-    # sed -i "s/thiq/${NIXOS_NAME}/g" /mnt/etc/nixos/configuration.nix # change installation name
-    # vim /mnt/etc/nixos/configuration.nix # you must edit some settings like a vpn/wifi support
+    # sed -i "s/thiq/${NIXOS_NAME}/g" /etc/nixos/configuration.nix # change installation name
+    # vim /etc/nixos/configuration.nix # you must edit some settings like a vpn/wifi support
     # nixos-rebuild switch
     # wpa_passphrase SSID PASSWORD >> /mnt/etc/wpa_supplicant.conf # optional but I usually do this
     # reboot
