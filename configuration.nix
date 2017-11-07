@@ -50,7 +50,7 @@
     dmenu xlibs.xmodmap ubuntu_font_family i3lock lxappearance sakura
     xfce.xfce4notifyd libnotify gtk_engines xorg.xbacklight
     # x apps
-    chromium thunderbird tdesktop scrot pinta
+    chromium thunderbird tdesktop scrot gimp
     google-play-music-desktop-player
     zathura wireshark
   ];
