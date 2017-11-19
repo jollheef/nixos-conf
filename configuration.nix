@@ -89,6 +89,19 @@
     theme = "/etc/nixos/files/slim-minimal2";
   };
 
+  # Screen locking on lid close
+  services.acpid = {
+    enable = true;
+    lidEventCommands = ''
+      if grep -q closed /proc/acpi/button/lid/*/state; then
+        DISPLAY=":0.0" XAUTHORITY=/home/mikhail/.Xauthority ${pkgs.i3lock}/bin/i3lock -n -c 000000 &
+      fi
+      if grep -q open /proc/acpi/button/lid/*/state; then
+        /run/current-system/sw/bin/systemctl restart openvpn-primary &
+      fi
+    '';
+  };
+
   # vpn
   services.openvpn.servers = {
     primary = { config = '' config /home/mikhail/etc/vpn/client/primary.ovpn ''; };
