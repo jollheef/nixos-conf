@@ -43,7 +43,7 @@
     # utils
     wget tmux zsh vim emacs htop acpi bc p7zip mpv
     gnupg pinentry git pass unzip w3m whois dnsutils feh
-    parted iotop
+    parted iotop nmap tldr
     # dev
     go gnumake gcc clang clang-analyzer global
     python2Full python3Full python27Packages.ipython python36Packages.ipython
@@ -53,7 +53,7 @@
     # x apps
     chromium thunderbird tdesktop scrot gimp
     google-play-music-desktop-player
-    zathura wireshark
+    zathura wireshark transmission_gtk
   ];
 
   programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
