@@ -54,6 +54,7 @@
     chromium thunderbird tdesktop scrot gimp
     google-play-music-desktop-player
     zathura wireshark transmission_gtk
+    fswebcam
   ];
 
   programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
