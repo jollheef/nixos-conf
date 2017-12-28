@@ -49,7 +49,7 @@
     python2Full python3Full python27Packages.ipython python36Packages.ipython
     # base x
     dmenu xlibs.xmodmap ubuntu_font_family i3lock lxappearance sakura
-    xfce.xfce4notifyd libnotify gtk_engines xorg.xbacklight
+    xfce.xfce4notifyd libnotify gtk_engines xorg.xbacklight x2x
     # x apps
     chromium thunderbird tdesktop scrot gimp
     google-play-music-desktop-player
@@ -88,6 +88,12 @@
     enable = true;
     defaultUser = "mikhail";
     theme = "/etc/nixos/files/slim-minimal2";
+  };
+
+  services.openssh = {
+    enable = true;
+    forwardX11 = true;
+    passwordAuthentication = false;
   };
 
   # Screen locking on lid close
